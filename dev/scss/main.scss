@@ -12,7 +12,7 @@
 
 *{
  	box-sizing: border-box;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -28,6 +28,9 @@ body{
 	color: #37373E;
 }
 
+.container{
+	max-width: 1320px;
+}
 
 /*end fancybox*/
 @import "buttons";
