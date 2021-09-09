@@ -1,0 +1,42 @@
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
+
+@import "colors";
+@import "bootstrap";
+
+
+*{
+ 	box-sizing: border-box;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+html{
+	font-size: 14px;
+}
+body{
+	font-weight: normal;
+	position: relative;
+	background-color: #E5E5E5;
+	color: #37373E;
+}
+
+
+/*end fancybox*/
+@import "buttons";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+@import 'blocks/header';
+@import 'blocks/promo';
+
+@import 'blocks/contacts';
+
+@import 'blocks/footer';
+
