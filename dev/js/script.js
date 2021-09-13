@@ -11,6 +11,28 @@ $(window).on('load', () => {
     //     }
     // });
 
+    const menu = document.querySelector('.menu'),
+    hamburger = document.querySelector('.hamburger'),
+    menuItem = document.querySelectorAll('.menu__item, .menu__link'),
+    menuPhone = document.querySelector('.header__phone'),
+    menuText = document.querySelector('.header__text');
+    
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger--active');
+        menu.classList.toggle('menu--active');
+        menuText.classList.toggle('d-block'),
+        menuPhone.classList.toggle('d-none');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.remove('hamburger--active');
+            menu.classList.remove('menu--active');
+        });
+    });
+
+
     $('a[href^="#"]:not(a.popup)').on('click', function() {
         let href = $(this).attr('href');
         $('html, body').animate({

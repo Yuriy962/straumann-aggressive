@@ -1,0 +1,83 @@
+.promo{
+    min-height: 691px;
+    background: url(../img/promo/lion.jpg) right/contain no-repeat,#000;
+    background-position: right -81px bottom -61px;
+    &__inner{
+        padding: 210px 0 40px;
+        min-height: 775px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__wrapper{
+        max-width: 60%;
+    }
+    &__title{
+        margin-bottom: 15px;
+    }
+    &__subtitle{
+        margin-bottom: 30px;
+    }
+    &__btn{
+        margin-top: 43px;
+    }
+    &__list{
+        margin-top: 50px;
+    }
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    &__img{
+        margin-right: 26px;
+        width: 44px;
+        height: 44px;
+        img{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1500px){
+        background-position: right -201px bottom -61px;
+    }
+    @media (max-width: 1350px){
+        background-position: right -401px bottom -61px;
+    }
+    @media (max-width: 1200px){
+        min-height: 720px;
+    }
+    @media (max-width: 992px){
+        background-position: right -201px bottom -61px;
+        &__wrapper{
+            max-width: 100%;
+        }
+        &__btn{
+            margin-top: 15px;
+        }
+        &__img{
+            margin-right: 15px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        background-position: right -304px bottom -61px;
+        background-size: 800px;
+        &__inner{
+            padding: 150px 0 40px;
+        }
+    }
+    @media (max-width: 576px){
+        background-position: center bottom 25%;
+        background-size: 550px;
+        &__list{
+            margin-top: 220px;
+        }
+        &__item{
+            font-size: 15px;
+        }
+    }
+}

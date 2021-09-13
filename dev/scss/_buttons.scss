@@ -1,0 +1,16 @@
+.btn{
+   background-color: #8FB91C;
+   color: #fff;
+   min-width: 190px;
+   max-width: 324px;
+   height: 65px;
+   font-size: 19px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border: transparent;
+   padding: 21px 43px;
+   &:hover{
+       background-color: $green--hover;
+   }
+}
