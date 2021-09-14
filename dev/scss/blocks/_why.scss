@@ -1,0 +1,100 @@
+.why{
+    background: url('../img/why/screw--big.jpg') no-repeat,
+    #000;
+    // background-position: center bottom 0;
+    background-position: right 47% bottom 0;
+    
+    &__inner{
+        min-height: 789px;
+        padding: 85px 0 75px;
+    }
+    &__content{
+        position: relative;
+    }
+    &__title{
+        margin-bottom: 55px;
+    }
+    &__item{
+        margin-bottom: 50px;
+        position: relative;
+    }
+    &__list{
+        list-style: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    strong{
+        color: $green;
+        font-size: 18px;
+        font-weight: normal;
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+        right: 0;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: auto;
+            height: 5px;
+            background-color: #fff;
+        }
+    }
+    &__text{
+        font-size: 16px;
+    }
+    &__btn{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 223px;
+    }
+    
+    @media (max-width: 992px){
+        background-size: 739px;
+        position: relative;
+        &__inner{
+            min-height: 1315px;
+            padding: 45px 0 50px;
+        }
+        &__title{
+            margin-bottom: 35px;
+        }
+        &__item{
+            margin-bottom: 20px;
+        }
+        strong{
+            font-size: 16px;
+        }
+        &__text{
+            font-size: 15px;
+        }
+        &__btn{
+            margin-bottom: -100px;
+        }
+    }
+    @media (max-width: 768px){
+        &__content{
+            position: static;
+        }
+        &__btn{
+            margin-bottom: 50px;
+        }
+    }
+    @media (max-width: 480px){
+        background-position: right 55% bottom 0;
+        &__inner{
+            padding: 45px 0 350px;
+        }
+        &__content{
+            position: static;
+        }
+        &__btn{
+            margin-bottom: 50px;
+        }
+    }
+}

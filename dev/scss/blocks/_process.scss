@@ -1,0 +1,96 @@
+.process{
+    &__inner{
+        padding: 80px 0 100px;
+    }
+    &__title{
+        margin-bottom: 2.5rem;
+    }
+    &__subtitle{
+        margin-bottom: 4rem;
+    }
+
+    &__list{
+        display: inline-flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        counter-reset: item; 
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &__item{
+        position: relative;
+        max-width: 308px;
+        margin-bottom: 2rem;
+        background-color: #EAEAEA;
+        border-radius: 3px;
+        color: $text-color;
+        margin-right: 15px;
+        margin-left: 15px;
+        flex-shrink: 0;
+        &:before{
+            counter-increment: item;
+            content: counter(item)'.';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 38px;
+            height: 38px;
+            background-color: $green;
+            border-radius: 50%;
+            font-size: 21px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__img{
+        height: 174px;
+        img{
+            width: 100%;
+        }
+    }
+    &__text{
+        padding: 22px 25px;
+        font-size: 18px;
+    }
+
+    @media (max-width: 992px){
+        &__inner{
+            padding: 40px 0 80px;
+        }
+        &__title{
+            margin-bottom: 22px;
+        }
+        .overflow-x{
+            overflow-x: auto;
+        }
+        &__list{
+            flex-wrap: nowrap;
+        }
+        &__item{
+            width: 308px;
+        }
+    }
+    @media (max-width: 576px){
+        &__subtitle{
+            margin-bottom: 2rem;
+        }
+        &__item{
+            width: 240px;
+            &:before{
+                width: 31px;
+                height: 31px;
+                font-size: 16px;
+                left: 10px;
+                top: 10px;
+            }
+        }
+        &__img{
+            height: 136px;
+        }
+        &__text{
+            padding: 18px;
+            font-size: 14px;
+        }
+    }
+}

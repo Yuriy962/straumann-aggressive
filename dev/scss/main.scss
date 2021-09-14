@@ -56,14 +56,13 @@ input{
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 @import 'blocks/header';
 @import 'blocks/promo';
+@import 'blocks/process';
+@import 'blocks/adv';
+@import 'blocks/why';
 
 @import 'blocks/contacts';
 
 @import 'blocks/footer';
-
-main{
-	height: 5000px;
-}
 
 .menu{
 	&__list{
@@ -159,6 +158,12 @@ main{
 .title{
 	font-size: 50px;
 	font-weight: bold;
+	@media(max-width: 992px){
+		font-size: 40px;
+	}
+	@media (max-width: 576px){
+		font-size: 32px;
+	}
 	&--main{
 		font-size: 64px;
 		@media (max-width: 1200px){
@@ -176,6 +181,12 @@ main{
 .subtitle{
 	font-size: 18px;
 	font-weight: 400;
+	@media (max-width: 992px){
+		font-size: 16px;
+	}
+	@media (max-width: 576px){
+		font-size: 15px;
+	}
 	&--main{
 		font-size: 24px;
 		margin-bottom: 15px;
