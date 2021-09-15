@@ -1,0 +1,62 @@
+.esthetic{
+    background-color: $green;
+    &__inner{
+        padding: 80px 0 100px;
+        min-height: 555px;
+        height: 100%;
+        position: relative;
+    }
+    &__title{
+        margin-bottom: 45px;
+    }
+    &__img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    &__content{
+        padding-left: 60px;
+    }
+
+    @media (max-width: 1400px){
+        &__content{
+            padding-left: 30px;
+        }
+    }
+    @media (max-width: 1200px){
+        &__img{
+            width: 45%;
+        }
+        &__content{
+            padding-left: 20px;
+        }
+    }
+    @media (max-width: 768px){
+        &__inner{
+            min-height: 710px;
+            padding: 40px 0 60px;
+        }
+        &__title{
+            margin-bottom: 25px;
+        }
+        &__img{
+            width: 100%;
+            height: 45%;
+            top: auto;
+            object-position: top;
+        }
+    }
+    @media (max-width: 380px){
+        &__img{
+            width: 100%;
+            height: 34%;
+            top: auto;
+            object-position: top;
+        }
+    }
+}

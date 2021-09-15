@@ -41,6 +41,23 @@ $(window).on('load', () => {
         return false;
     });
 
+    $('.certificates').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: 
+        '<button type="button" class="slick-arrow slick-prev">' +
+            '<svg viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                '<path class="slick-arrow-img" d="M17 1L2 16L17 31" stroke="white" stroke-width="2"/>' +
+            '</svg>' + 
+        '</button>',
+        nextArrow: 
+        '<button type="button" class="slick-arrow slick-next">'+
+            '<svg viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                '<path class="slick-arrow-img" d="M1 31L16 16L0.999997 1" stroke="white" stroke-width="2"/>' +
+            '</svg>' +
+        '</button>'
+    });
+
 
     // Отправка формы
     // $("form").on("submit", (function (e) {
