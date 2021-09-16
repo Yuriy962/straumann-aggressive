@@ -20,14 +20,16 @@ $(window).on('load', () => {
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('hamburger--active');
-        menu.classList.toggle('menu--active');
         menuText.classList.toggle('d-block'),
         menuPhone.classList.toggle('d-none');
+        menu.classList.toggle('menu--active');
     });
 
     menuItem.forEach(item => {
         item.addEventListener('click', () => {
             hamburger.classList.remove('hamburger--active');
+            menuText.classList.toggle('d-block'),
+            menuPhone.classList.toggle('d-none');
             menu.classList.remove('menu--active');
         });
     });
@@ -58,6 +60,7 @@ $(window).on('load', () => {
         '</button>'
     });
 
+    
 
     // Отправка формы
     // $("form").on("submit", (function (e) {
@@ -92,12 +95,18 @@ $(window).on('load', () => {
 });
 
 // Map
-// YaMapsShown = false; 
-// $(window).on('scroll', function() {
-//     if (!YaMapsShown){
-//         if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {      
-//         showYaMaps();
-//         YaMapsShown = true;
-//         }
-//     }
-// });
+YaMapsShown = false; 
+$(window).scroll(function() {
+    if (!YaMapsShown){
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 102) {      
+        showYaMaps();
+        YaMapsShown = true;
+        }
+    }
+});
+function showYaMaps(){
+    var script   = document.createElement("script");
+    script.type  = "text/javascript";
+    script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32062da92eafd2a9f620ab4b66e0726df9b6520bcd7502c0ff743d1ad9434ff3&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true";
+    document.getElementById("YaMaps").appendChild(script);
+}
