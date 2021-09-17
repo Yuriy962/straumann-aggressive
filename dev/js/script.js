@@ -98,7 +98,7 @@ $(window).on('load', () => {
 YaMapsShown = false; 
 $(window).scroll(function() {
     if (!YaMapsShown){
-        if($(window).scrollTop() + $(window).height() > $(document).height() - 102) {      
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 702) {      
         showYaMaps();
         YaMapsShown = true;
         }
