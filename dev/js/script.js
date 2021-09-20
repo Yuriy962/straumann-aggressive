@@ -62,31 +62,19 @@ $(window).on('load', () => {
         '</button>'
     });
 
+    let formContent = '';
     // Отправка формы
-    // $("form").on("submit", (function (e) {
-    //     e.preventDefault();
-    //     let form = $(this);
-    //     let formData = $(this).serialize();
-    //     let inputDoctor = form.find('input[name="doctor"]');
-    //     if(inputDoctor.length > 0){
-    //         formData += '&doctor=' + inputDoctor.val();
-    //     }
-    //     return $.ajax({
-    //         type: "POST",
-    //         url: "../send.php",
-    //         data: formData,
-    //         success: function (e) {
-    //             e = JSON.parse(e);
-    //             console.log(e.result);
-    //             if("success" === e.result){
-    //                 form.find('.form-message--success').css('display', 'block');
-    //             }else{
-    //                 form.find('.form-message--error').css('display', 'block');
-    //             }
-    //             form.find("input[type='name'], input[type='tel'], input[name='doctor']").val("").val(""), $("form").trigger("reset");
-    //         }
-    //     });
-    // }));
+    $("form").on("submit", (function (e) {
+        let textWhite = '';
+        e.preventDefault();
+        let form = $(this);
+        if(form[0].classList.contains('entry__form')){
+            textWhite = 'text-white';
+        }
+        formContent = '<h2 class="title text-center form-popup__title"> Спасибо, наш менеджер свяжется с Вами в ближайшее время </h2><h3 class="subtitle text-center form-popup__subtitle '+ textWhite + ' ">А пока можете ознакомится с другими нашими услугами на сайте <a href="https://ortoprof.ru/" style="color: #8fb91c">ortoprof.ru</a> </h3> <div class="form__row form-popup__row"><a class="btn form-popup__btn text-white" href="https://ortoprof.ru/" style="padding: 0">Перейти на сайт</a></div>';
+        console.log('success');
+        form[0].innerHTML = formContent;
+    }));
 
     $().fancybox();
 

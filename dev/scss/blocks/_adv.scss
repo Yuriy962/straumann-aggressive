@@ -17,20 +17,26 @@
         object-position: center;
     }
     &__content{
-        padding-left: 90px;
+        padding-left: 60px;
     }
     &__title{
         line-height: 120%;
         margin-bottom: 3rem;
     }
-
+    @media (max-width: 1400px){
+        &__content{
+            padding-left: 30px;
+        }
+    }
+    @media (max-width: 1200px){
+        &__content{
+            padding-left: 20px;
+        }
+    }
     @media (max-width: 992px){
         min-height: 604px;
         &__inner{
             padding: 43px 0 50px;
-        }
-        &__content{
-            padding-left: 0;
         }
         &__title{
             text-align: center;

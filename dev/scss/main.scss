@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 html{
 	font-size: 14px;
-	@media (max-width: 1380px){
+	@media (max-width: 1379px){
 		font-size: 12px;
 	}
 }
@@ -44,9 +44,10 @@ a{
 }
 button,
 input{
+	border: 2px solid;
 	&:focus{
 		outline: transparent;
-		border: transparent;
+		border-color: transparent;
 	}
 	&[type="text"],
 	&[type="tel"]{
@@ -143,10 +144,11 @@ input{
 	}
 }
 
-.logo{
-	img{
-		width: 100%;
-		object-fit: cover;
+@media (max-width: 400px){
+	.logo{
+		img{
+			width: 100%;
+		}
 	}
 }
 
@@ -407,7 +409,7 @@ input{
 	input {
 		margin-left: 15px;
 		margin-right: 15px;
-		border: 1px solid transparent;
+		border: 2px solid transparent;
 
 		&[type="submit"] {
 			margin-right: 30px;
@@ -536,4 +538,37 @@ input{
 
 .phone a{
 	font-family: 'Open Sans', sans-serif;
+}
+
+.d-lg-flex{
+	@media (max-width: 991px){
+		display: flex;
+	}
+}
+
+.justify-content-md-center{
+	@media (max-width: 991px){
+		justify-content: center;
+	}
+}
+
+.popup-policy{
+	font-size: 1rem;
+	max-width: 800px;
+	h2{
+		margin-bottom: 1.5rem;
+	}
+	p{
+		margin-bottom: 1rem;
+	}
+	@media (max-width: 992px){
+		max-width: 600px;
+	}
+	@media (max-width: 700px){
+		max-width: calc( 100% - 20px );
+		padding: 35px;
+	}
+	@media (max-width: 576px){
+		padding: 30px;
+	}
 }

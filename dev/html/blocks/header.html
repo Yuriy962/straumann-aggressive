@@ -20,9 +20,14 @@
         <div class="header__inner">
             <div class="container">
                 <div class="row m-0">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 d-lg-flex justify-content-md-center">
                         <div class="logo header__logo">
-                            <img src="icons/logo.svg" alt="header:logo">
+                            <picture>
+                                <source srcset="icons/logo.png" media="(max-width: 992px) and (min-width: 1380px)">
+                                <source srcset="icons/logo-340.png" media="(max-width: 1379px)">
+                                <source srcset="icons/logo-280.png" media="(max-width: 1200px)">
+                                <img src="icons/logo.png" alt="header:logo">
+                            </picture>
                         </div>
                     </div>
                     <div class="col-lg-8 p-0 position-static">
