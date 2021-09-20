@@ -60,8 +60,9 @@
                 &:before{
                     border-left: 0;
                     transform: skewX(60deg);
-                    right: 0;
+                    right: 0px;
                     left: auto;
+                    border-right: 3.5px solid #fff;
                 }
             }
         }
@@ -78,6 +79,7 @@
                     transform: skewX(-60deg);
                     right: auto;
                     left: auto;
+                    border-left: 3.5px solid #fff;
                 }
             }
         }
